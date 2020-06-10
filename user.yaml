@@ -7,16 +7,17 @@
   tasks:
   - name: Add User bob
     user:
-      name: bob 
+      name: bob
       comment: "John Smith"
-      groups: Wheel
+      groups: Wheel 
       generate_ssh_key: yes 
       state: present 
 
   - name: Add User lisa
     user:
-      name: bob 
-      state: present
+      name: lisa 
+      state: absent
+
 
 
     
