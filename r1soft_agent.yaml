@@ -32,5 +32,12 @@
 
   - name: Get key
     when: (ansible_facts['distribution'] == "CentOS" and ansible_facts['distribution_major_version'] == "6")
-    command: "r1soft-setup --get-key  http://35.176.16.49:8080/"       
+    command: "r1soft-setup --get-key  http://35.176.16.49:8080/" 
+
+
+ handlers: 
+   - name: AGENT_INSTALLED_ON_CENTOS_6
+     service:
+       name:
+        
 
